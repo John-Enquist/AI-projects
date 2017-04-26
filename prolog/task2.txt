@@ -1,0 +1,16 @@
+Task 2 answers:
+
+1: true
+
+2: ERROR
+
+3: false
+
+4: ERROR
+
+5: true
+
+6: Y = ron
+   Y = harry.
+
+7: ERROR

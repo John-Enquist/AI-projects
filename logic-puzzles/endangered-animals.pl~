@@ -1,0 +1,66 @@
+%% John Enquist project 4 prolog logic puzzles part two endangered animals
+
+prefix(P,L) :- append(P,_,L).
+suffix(S,L) :- append(_,S,L).
+sublist(SubL,L) :- suffix(S,L),prefix(SubL,S).
+
+
+%% R is the list of endangered animals in year order   
+report(R) :-
+    %% the report is represented as a list of 6 animals
+    animal_list = [a1,a2,a3,a4,a5,a6],
+
+    %% each endangered animal  is represented as a 4 tuple described below
+    %% endangered(animal,origin,population,year-endangered)
+    member(endangered(perens_pig,_,_\=525,_), animal_list),
+    member(endangered(_,egypt,_,_), animal_list), animal_list),
+
+    %% using some mofuckin sublists
+    sublist([endangered(_,_,525,_),endangered(nibner_newt,_,_,_)], animal_list)),
+
+    %% fact 4
+    member(endangered(_,_\=ukraine,_,2009), animal_list),
+    member(endangered(_,_\=ukraine,350,_), animal_list),
+
+    %% fact 5
+    sublist([endangered(_,_,245,_),endangered(_,_,420,_)], animal_list)),
+
+    %% fact 6
+     sublist([endangered(dobra_dingo,_,_,_),endangered(_,_,_,_),endangered(lisner_cat,_,_,_)], animal_list)),
+
+    %% fact 7
+    (member(endangered(_,_,315,2011), animal_list);
+    member(endangered(_,venezuela,_,2011), animal_list)),
+    
+    %% fact 8
+    (member(endangered(elder_elk,_,_,2008), animal_list);
+    member(endangered(elder_elk,indonesia,_,_), animal_list)),
+
+    %% fact 9
+    sublist([endangered(elder_elk,_,_,_),endangered(_,kosovo,_,_)], animal_list)),
+
+    %% fact 10
+    sublist([endangered(_,_,525,X),endangered(_,oman,_,X+4)], animal_list)),
+
+    %% fact 11
+    sublist([endangered(_,_,525,_),endangered(_,indonesia,_,_)], animal_list)),
+
+    %% fact 12
+    (member(endangered(_,ukraine,_,2010), animal_list);
+    member(endangered(_,ukraine,_,2006), animal_list)),
+    (member(endangered(_,_,560,2010), animal_list);
+    member(endangered(_,_,560,2006), animal_list)),
+
+    %% fact 13
+    (member(endangered(lisner_cat,_,315,_), animal_list);
+    member(endangered(lisner_cat,_,_,2008), animal_list)),
+    (member(endangered(_,slovenia,315,_), animal_list);
+    member(endangered(_,slovenia,560,2008), animal_list)),
+
+    %% fact 14
+    %% The animal that lives in Slovakia is either the animal with a population     %% size of 420 or the animal with a population size of 525.
+    (member(endangered(_,slovenia,420,_), animal_list);
+    member(endangered(_,slovenia,525,_), animal_list)),
+
+    %% fact 15
+    

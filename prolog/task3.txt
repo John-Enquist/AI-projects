@@ -1,0 +1,14 @@
+task 3 queries:
+
+a) false
+
+b) false
+
+c) type error
+
+d) type Error
+
+e) Hermione = dobby  
+   Hermione = hermione
+   Hermione = 'McGonagall'
+   Hermione = 'rita_skeeter'
